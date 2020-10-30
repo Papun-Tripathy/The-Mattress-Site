@@ -1,0 +1,113 @@
+.the-persons {
+    margin-bottom: 20px;
+  }
+  
+  .the-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  
+  @media (min-width: 420px) {
+    .the-person {
+      flex-direction: row;
+    }
+  }
+  
+  .the-person-description {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .the-person-name {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #09c;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  
+  @media (min-width: 420px) {
+    .the-person-name {
+      margin-top: 0;
+    }
+  }
+  
+  .the-person-title {
+    color: #c39;
+    margin-bottom: 20px;
+  }
+  
+  .the-person-about {
+    margin-bottom: 20px;
+  }
+  
+  .the-feature {
+    text-align: center;
+    padding: 45px 20px;
+  }
+  
+  .the-feature-icon {
+    color: #9f9c9c;
+    margin-bottom: 65px;
+  }
+  
+  .the-feature-description {
+    margin-bottom: 35px;
+    font-size: 1rem;
+  }
+  
+  .the-features {
+    margin-top: 35px;
+  }
+  
+  .the-history {
+    margin-top: 45px;
+  }
+  
+  .the-history-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .the-history-img {
+    max-width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .the-history-img {
+      max-width: 50%;
+    }
+  
+    .the-history-inner {
+      flex-direction: row;
+    }
+  }
+  
+  .the-history-title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #1a6692;
+    margin-bottom: 30px;
+  }
+  
+  .the-history-text {
+    max-width: 480px;
+    margin: 15px auto 0;
+  }
+  
+  .the-history-description {
+    margin-bottom: 40px;
+  }
+  
+  @media (min-width: 768px) {
+    .the-history-text {
+      max-width: auto;
+      margin: 0 auto 0 35px;
+    }
+  }
+  

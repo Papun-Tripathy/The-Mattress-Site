@@ -1,0 +1,393 @@
+
+/* Actuall CSS Starts */
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 17px;
+  background-color: #ccc;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: white;
+}
+
+p,
+address {
+  color: #626364;
+  line-height: 1.8;
+}
+
+/* I have to Set width and height in JS */
+.placeholder {
+  width: 100%;
+  min-height: 460px;
+  background-color: #556e5b;
+}
+
+.placeholder-2 {
+  width: 100%;
+  min-height: 220px;
+  background-color: #cfbea5;
+  position: relative;
+  z-index: 998;
+}
+
+.parallax-window {
+  min-height: 460px;
+  background: transparent;
+  position: relative;
+}
+
+.parallax-window-2 {
+  min-height: 220px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  position: relative;
+}
+
+.parallax-mirror {
+  z-index: 999 !important;
+}
+/* Header is EveryWhere Remember to Copy the Header Parts To everyWhere */
+.the-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  z-index: 1000;
+}
+
+.the-header-inner {
+  padding: 40px 50px;
+}
+
+@media (max-width: 991px) {
+  .the-header-inner {
+    padding: 30px 15px;
+  }
+}
+
+.the-site-logo {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.the-site-text-box {
+  display: inline-block;
+}
+
+.the-site-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.the-site-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.the-nav {
+  text-align: right;
+  /* margin-top: 30px; */
+  background-color: snow;
+  position: sticky;
+  padding: 5px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  background: rgb(255,255,255);
+}
+
+.the-nav-ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.the-nav-li {
+  list-style: none;
+  display: block;
+  margin-bottom: 0;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@media (max-width: 991px) {
+  .the-nav-li {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.the-nav-link {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.the-nav-link.active {
+  border-top: 2px solid royalblue;
+  border-bottom: 2px solid rebeccapurple;
+  border-radius: 4px;
+}
+.the-nav-link:hover {
+  animation: theOpenTab 0.4s ease-in-out;
+}
+@keyframes theOpenTab {
+  0% {
+    border-top: 2px solid royalblue;
+    border-bottom: 2px solid rebeccapurple;
+    border-radius: 4px;
+
+  }
+  50% {
+    border-top: 2px solid royalblue;
+    border-bottom: 2px solid rebeccapurple;
+    border-radius: 4px;
+
+  }
+  100% {
+    border-top: 2px solid royalblue;
+    border-bottom: 2px solid rebeccapurple;
+    border-radius: 4px;
+
+  }
+}
+/* Header Ends Here  */
+.the-welcome-section {
+  margin: 60px auto;
+  max-width: 655px;
+}
+
+.the-section-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+/* The Modal With Display */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  min-height: 100vh;
+  grid-gap: 1.5rem;
+  padding: 1.5rem;
+}
+.img-container{
+  overflow: hidden;
+}
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .4s;
+  cursor: pointer;
+
+}
+.img-container img:hover{
+  transform: scale(1.2);
+}
+
+.modal{
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* this is for hide something with opacity and it is specific for to not to clickable on the hidden file  */
+  transition: 0.25s ease-out;
+  z-index: 2999;
+}
+.modal.open{
+  opacity: 1;
+  pointer-events: all;
+}
+.modal .full-img{
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%,-50%) scale(0.5);
+  transition: all .25s ease-out;
+  object-fit: contain;
+}
+.full-img.open{
+  transform: translate(-50%,-50%) scale(1);
+
+}
+.modal p{
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%,-5%);
+}
+
+/* the Modal Ends */
+.the-gallery {
+  margin-bottom: 80px;
+}
+
+.the-gallery-page {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.the-gallery-description {
+  font-size: 0.95rem;
+}
+
+.the-section,
+.the-container-inner,
+.the-container-inner-2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .the-gallery-page {
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 768px) {
+  .the-gallery-page,
+  .the-section,
+  .the-container-inner,
+  .the-container-inner-2 {
+    max-width: 840px;
+  }
+}
+
+@media (min-width: 992px) {
+  .the-gallery-page,
+  .the-section {
+    max-width: 1120px;
+  }
+
+  .the-container-inner {
+    max-width: 1120px;
+  }
+
+  .the-container-inner-2 {
+    max-width: 900px;
+  }
+}
+
+.the-gallery-item {
+  max-width: 280px;
+}
+
+.the-gallery-img {
+  margin-bottom: 20px;
+}
+
+.the-gallery-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #1a6692;
+  margin-bottom: 15px;
+}
+
+.the-gallery-description {
+  margin-bottom: 20px;
+}
+
+.the-gallery-price {
+  font-size: 1.25rem;
+  color: #2f956d;
+  margin-bottom: 60px;
+}
+
+.the-paging-links {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.the-paging-item {
+  list-style: none;
+  display: inline-block;
+  border: 1px solid #2f956d;
+  margin: 7px;
+}
+
+.the-paging-link {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2f956d;
+  background-color: transparent;
+}
+
+.the-paging-link.active,
+.the-paging-link:hover {
+  background-color: #2f956d;
+  color: white;
+}
+
+.the-description-figure {
+  text-align: center;
+}
+
+.the-description-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.the-description-box {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  max-width: 530px;
+}
+
+@media (min-width: 768px) {
+  .the-description-box {
+    padding-left: 5px;
+    padding-right: 40px;
+    margin-top: 0;
+  }
+}
+
+.the-right {
+  align-self: flex-end;
+}
+
+/* The Footer Is Also EveryWhere remember to Add This in Everyone's CSS */
+.the-footer {
+  padding: 25px 15px;
+  margin-top: 40px;
+}
+
+.the-footer a {
+  color: #626364;
+  text-decoration: none;
+}
+
+.the-footer a:hover {
+  color: #1a6692;
+}
+
+
+
+
